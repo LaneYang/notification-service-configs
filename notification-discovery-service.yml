@@ -1,0 +1,13 @@
+spring:
+  config:
+    name: notification-discovery-service
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka
