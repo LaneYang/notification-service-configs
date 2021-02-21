@@ -1,0 +1,23 @@
+spring:
+  config:
+    name: notification-persist-service
+
+  data:
+    mongodb:
+      database: notification
+      host: localhost
+      port: 8083
+
+  cache:
+    type: redis
+    redis:
+      cacheNullValues: false
+      timeToLive: 86400
+
+  redis:
+    host: localhost
+    port: 8084
+    timeout: 1000
+
+server:
+  port: 8101
