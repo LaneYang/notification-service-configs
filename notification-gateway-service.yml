@@ -1,0 +1,22 @@
+spring:
+  config:
+    name: notification-gateway-service
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+zuul:
+  routes:
+    config:
+      url: http://localhost:8081
+    discovery:
+      url: http://localhost:8082
+    mongodb:
+      url: http://localhost:8083
+    redis:
+      url: http://localhost:8084
