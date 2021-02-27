@@ -20,3 +20,7 @@ zuul:
       url: http://localhost:8083
     redis:
       url: http://localhost:8084
+
+    persist:
+      path: /persist/**
+      serviceId: NOTIFICATION-PERSIST-SERVICE
