@@ -19,6 +19,12 @@ spring:
     port: 8084
     timeout: 1000
 
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: http://localhost:8091
+
 eureka:
   client:
     serviceUrl:
@@ -26,3 +32,4 @@ eureka:
 
 server:
   port: 8101
+

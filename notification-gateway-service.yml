@@ -2,6 +2,12 @@ spring:
   config:
     name: notification-gateway-service
 
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: http://localhost:8091
+
 server:
   port: 8080
 
