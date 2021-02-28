@@ -33,3 +33,8 @@ eureka:
 server:
   port: 8101
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

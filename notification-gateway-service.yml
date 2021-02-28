@@ -30,3 +30,9 @@ zuul:
     persist:
       path: /persist/**
       serviceId: NOTIFICATION-PERSIST-SERVICE
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
