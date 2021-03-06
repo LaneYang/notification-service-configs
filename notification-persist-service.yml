@@ -40,9 +40,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 8085
-    password: techbow
-    username: offer
-
+    password: guest
+    username: guest
 
 eureka:
   client:
