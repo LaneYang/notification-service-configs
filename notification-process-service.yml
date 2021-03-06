@@ -1,0 +1,41 @@
+spring:
+  config:
+    name: notification-process-service
+
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: http://localhost:8091
+
+  cloud:
+    stream:
+      default:
+        contentType:
+      bindings:
+        process:
+          destination: queue.process
+          group: notification-process-service
+        persist:
+          destination: queue.persist
+          group: notification-persist-service
+
+  rabbitmq:
+    host: localhost
+    port: 8085
+    password: techbow
+    username: offer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+server:
+  port: 8100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
