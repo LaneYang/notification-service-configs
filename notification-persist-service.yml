@@ -25,6 +25,25 @@ spring:
   zipkin:
     baseUrl: http://localhost:8091
 
+  cloud:
+    stream:
+      default:
+        contentType:
+      bindings:
+        persist:
+          destination: queue.persist
+          group: notification-persist-service
+        process:
+          destination: queue.process
+          group: notification-process-service
+
+  rabbitmq:
+    host: localhost
+    port: 8085
+    password: techbow
+    username: offer
+
+
 eureka:
   client:
     serviceUrl:
