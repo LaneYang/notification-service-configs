@@ -31,6 +31,10 @@ zuul:
       path: /persist/**
       serviceId: NOTIFICATION-PERSIST-SERVICE
 
+    proccess:
+      path: /process/**
+      serviceId: NOTIFICATION-PROCESS-SERVICE
+
 management:
   endpoints:
     web:
