@@ -1,0 +1,33 @@
+spring:
+  config:
+    name: tracker-persist-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:8087/techbow?useSSL=false&allowPublicKeyRetrieval=true
+    initialization-mode: always
+    password: root-password
+    platform: mysql
+    username: root
+
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: http://localhost:8091
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+server:
+  port: 8102
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
