@@ -19,6 +19,12 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:8082']
 
+  - job_name: 'notification-process-actuator'
+    metrics_path: "actuator/prometheus"
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['localhost:8100']
+
   - job_name: 'notification-persist-actuator'
     metrics_path: "actuator/prometheus"
     scrape_interval: 15s
