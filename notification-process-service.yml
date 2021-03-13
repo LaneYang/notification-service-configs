@@ -19,6 +19,9 @@ spring:
         persist:
           destination: queue.persist
           group: notification-persist-service
+        render:
+          destination: queue.render
+          group: notification-render-service
 
   rabbitmq:
     host: localhost
