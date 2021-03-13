@@ -13,10 +13,10 @@ spring:
       default:
         contentType:
       bindings:
-        process:
+        render:
           destination: queue.render
           group: notification-render-service
-        persist:
+        deliver:
           destination: queue.deliver
           group: notification-deliver-service
 
