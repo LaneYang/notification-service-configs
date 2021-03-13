@@ -36,6 +36,9 @@ spring:
         process:
           destination: queue.process
           group: notification-process-service
+        render:
+          destination: queue.render
+          group: notification-render-service
 
   rabbitmq:
     host: localhost
