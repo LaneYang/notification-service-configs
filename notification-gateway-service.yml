@@ -31,9 +31,17 @@ zuul:
       path: /persist/**
       serviceId: NOTIFICATION-PERSIST-SERVICE
 
+    tracker:
+      path: /tracker/**
+      serviceId: TRACKER-PERSIST-SERVICE
+
     proccess:
       path: /process/**
       serviceId: NOTIFICATION-PROCESS-SERVICE
+
+    schedule:
+      path: /schedule/**
+      serviceId: NOTIFICATION-SCHECULER-SERVICE
 
 management:
   endpoints:
