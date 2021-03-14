@@ -28,7 +28,7 @@ spring:
   cloud:
     stream:
       default:
-        contentType:
+        contentType: application/json
       bindings:
         persist:
           destination: queue.persist

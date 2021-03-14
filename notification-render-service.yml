@@ -11,7 +11,7 @@ spring:
   cloud:
     stream:
       default:
-        contentType:
+        contentType: application/json
       bindings:
         render:
           destination: queue.render
