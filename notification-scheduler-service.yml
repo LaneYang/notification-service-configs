@@ -1,0 +1,38 @@
+spring:
+  config:
+    name: notification-scheduler-service
+
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: http://localhost:8091
+
+  cloud:
+    stream:
+      default:
+        contentType: application/json
+      bindings:
+        process:
+          destination: queue.process
+          group: notification-process-service
+
+  rabbitmq:
+    host: localhost
+    port: 8085
+    password: guest
+    username: guest
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+
+server:
+  port: 8130
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
